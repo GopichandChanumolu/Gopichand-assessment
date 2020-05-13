@@ -179,7 +179,7 @@ class friendpage
 		delete search;
 	}
 
-/*Function Name :edit
+/*Function Name :addingfriend
   Parameters    :no parameters
   Return Type   :no return type
   Usage         :to edit the user emailid with the help of user name */
