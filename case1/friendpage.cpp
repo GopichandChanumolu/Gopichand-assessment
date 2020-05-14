@@ -48,6 +48,7 @@ class friendpage
 			cin>>*Smailid;
 			// inserting data into the map
 			Smain.insert({*Sname,*Smailid});
+			cout<<"user data added succesfully "<<endl;
 			
 		}
 		else
