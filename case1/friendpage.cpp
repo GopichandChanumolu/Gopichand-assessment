@@ -40,10 +40,22 @@ class friendpage
 		cout<<"Enter name  "<<endl;
 		cin.ignore();
 		getline(cin,*Sname);
-		cout<<"Enter emailid "<<endl;
-		cin>>*Smailid;
-		// inserting data into the map
-		Smain.insert({*Sname,*Smailid});
+		// to check weather the user is already existed or not
+		itr = Smain.find(*Sname);
+		if(itr == Smain.end() )
+		{	
+			cout<<"Enter emailid "<<endl;
+			cin>>*Smailid;
+			// inserting data into the map
+			Smain.insert({*Sname,*Smailid});
+			
+		}
+		else
+		{				
+		cout<<" User name is already existed "<<endl;
+		cout<<" try to add with different user name "<<endl;
+		}
+		
 		//deallocating memorey dynamicaly for name and emailid 
 		delete Sname;
 		delete Smailid;
@@ -258,6 +270,7 @@ class friendpage
      if (t==false)
      {
      cout<<"entered name is not present \n"<<endl;
+     cout<<endl;
      }
      else
      {
